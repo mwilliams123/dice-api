@@ -13,6 +13,6 @@ app.get('/api/:nsides', (req, resp) => {
     resp.json(data)
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.port || PORT, () => {
     console.log(`Server is now running on port ${PORT}.`)
 })
