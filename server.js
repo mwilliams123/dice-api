@@ -7,6 +7,13 @@ app.get('/', (req, resp) => {
 })
 
 /*
+Return API help page.
+*/
+app.get('/api/', (req, resp) => {
+    resp.sendFile(__dirname + '/usage.html')
+})
+
+/*
 Return a random number between 1 and nsides.
 */
 app.get('/api/:nsides', (req, resp) => {
